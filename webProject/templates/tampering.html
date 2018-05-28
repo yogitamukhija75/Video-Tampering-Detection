@@ -1,0 +1,25 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Enter 0 in both indexes if u dont want to tamper video.
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_table}}
+    <br/>
+    <br/>
+
+    Current Number of Frames in Video = {{count}}
+    <br/>
+    <br/>
+     <input class="btn btn-lg btn-primary" type="submit" value="Submit">
+</form>
+
+</body>
+</html>

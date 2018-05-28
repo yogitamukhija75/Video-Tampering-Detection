@@ -1,0 +1,16 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Starting</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form|crispy}}
+     <input class="btn btn-lg btn-primary" type="submit" value="Submit">
+</form>
+</body>
+</html>
